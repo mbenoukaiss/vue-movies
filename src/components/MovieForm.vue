@@ -98,6 +98,8 @@
                 }
 
                 window.movies[this.movie.id] = this.movie;
+                this.save();
+
                 this.$router.back();
             },
         },

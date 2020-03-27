@@ -17,7 +17,6 @@
             return {
                 movies: window.movies,
                 displayed_movies: [],
-                latest: 0,
                 search: null
             };
         },
@@ -26,7 +25,7 @@
                 this.movies.splice(this.movies.indexOf(movie), 1);
 
                 this.refresh();
-                this.form = {};
+                this.save();
             },
             refresh() {
                 if (this.search) {
@@ -49,7 +48,6 @@
             }
         },
         created() {
-            this.latest = 0;
             this.displayed_movies = this.movies;
         },
         components: {

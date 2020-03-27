@@ -68,6 +68,7 @@
         methods: {
             updateRate(evt, props) {
                 this.movie.rate = props.rating;
+                this.save();
             },
         },
     }
